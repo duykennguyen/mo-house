@@ -71,7 +71,7 @@ function renderHeader() {
       <button class="icon-btn burger" id="burger" aria-label="Menu">${ICON.menu}</button>
       <a class="logo" href="index.html" aria-label="Mô Đi Phê House — Trang chủ" data-en-aria="Mô Đi Phê House — Home">
         <img src="assets/img/logo-mark.png" alt="Mô">
-        <span class="logo__tag" data-en="refined living in Hội An">không gian sống chuẩn mực tại Hội An</span>
+        <span class="logo__tag" data-en="refined living<br>in Hội An">không gian sống chuẩn mực<br>tại Hội An</span>
       </a>
       <nav class="nav" aria-label="Menu chính" data-en-aria="Main menu">${links}</nav>
       <div class="actions">

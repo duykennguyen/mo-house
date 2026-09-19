@@ -307,5 +307,6 @@ button.link-line { cursor: pointer; }
 }
 
 /* Sửa web — 19/09: tagline dài hơn ("không gian sống chuẩn mực tại Hội An") */
-@media (max-width: 1320px) and (min-width: 1101px) { .logo__tag { display: none; } }
-@media (max-width: 420px) { .logo__tag { font-size: 15px; } }
+
+/* Sửa web — 19/09: tagline 2 dòng, căn giữa ("tại Hội An" xuống hàng) */
+.logo__tag { display: inline-block !important; text-align: center; line-height: 1.05; white-space: nowrap; align-self: center; margin-top: 4px; }
