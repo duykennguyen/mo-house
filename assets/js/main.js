@@ -71,7 +71,7 @@ function renderHeader() {
       <button class="icon-btn burger" id="burger" aria-label="Menu">${ICON.menu}</button>
       <a class="logo" href="index.html" aria-label="Mô Đi Phê House — Trang chủ" data-en-aria="Mô Đi Phê House — Home">
         <img src="assets/img/logo-mark.png" alt="Mô">
-        <span class="logo__tag" data-en="homes for slow living">nhà để sống chậm</span>
+        <span class="logo__tag" data-en="refined living in Hội An">không gian sống chuẩn mực tại Hội An</span>
       </a>
       <nav class="nav" aria-label="Menu chính" data-en-aria="Main menu">${links}</nav>
       <div class="actions">
@@ -145,7 +145,13 @@ function renderFooter() {
       </div>
     </div>
   </footer>
-  <a class="float-chat" href="${CONTACT.zalo}" target="_blank" rel="noopener" aria-label="Nhắn Zalo" data-en-aria="Message on Zalo">${ICON.chat}<span data-en="Chat">Nhắn tin</span></a>
+  <div class="float-contact" id="floatContact">
+    <div class="float-contact__menu" id="floatMenu" hidden>
+      <a href="${CONTACT.zalo}" target="_blank" rel="noopener"><b>Zalo</b><span>${CONTACT.phoneDisplay}</span></a>
+      <a href="https://wa.me/${CONTACT.whatsapp}" target="_blank" rel="noopener"><b>WhatsApp</b><span>${CONTACT.phoneDisplay}</span></a>
+    </div>
+    <button class="float-chat" id="floatBtn" aria-expanded="false" aria-controls="floatMenu">${ICON.chat}<span data-en="Contact">Liên hệ</span></button>
+  </div>
   <div class="toast" id="toast" role="status" aria-live="polite">${ICON.check}<span></span></div>`;
 }
 
@@ -600,6 +606,13 @@ function initChrome() {
   $$('[data-close]', drawer).forEach(el => el.addEventListener('click', () => drawer.classList.remove('open')));
   addEventListener('keydown', e => { if (e.key === 'Escape') drawer.classList.remove('open'); });
   $$('[data-lang]').forEach(b => b.addEventListener('click', () => applyLang(b.dataset.lang)));
+
+  // Nút "Liên hệ" nổi: bấm mở menu Zalo / WhatsApp
+  const fBtn = $('#floatBtn'), fMenu = $('#floatMenu');
+  const setMenu = open => { fMenu.hidden = !open; fBtn.setAttribute('aria-expanded', open); };
+  fBtn.addEventListener('click', e => { e.stopPropagation(); setMenu(fMenu.hidden); });
+  document.addEventListener('click', e => { if (!e.target.closest('#floatContact')) setMenu(false); });
+  addEventListener('keydown', e => { if (e.key === 'Escape') setMenu(false); });
 }
 
 renderHeader();
