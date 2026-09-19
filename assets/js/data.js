@@ -44,7 +44,7 @@ const HOUSES = [
       en: 'A four-storey house in the Cẩm Châu rice fields, with six apartments named after Hội An’s kitchen herbs. Country-quiet, yet a ten-minute bike ride to the Ancient Town and the beach.',
     },
     highlights: [
-      { vi: 'Thiết kế và hoàn thiện vượt mặt bằng cùng tầm giá ở Hội An — khách thường khen kiến trúc và chất lượng công trình.', en: 'Design and finish above the local standard — guests often praise the architecture and build quality.' },
+      { vi: 'Kiến trúc đương đại, hoàn thiện tỉ mỉ — điều khách lưu trú luôn nhắc đến đầu tiên.', en: 'Contemporary architecture, meticulously finished — the first thing our guests mention.' },
       { vi: 'Đồng lúa ở cả mặt trước lẫn mặt sau nhà. Xe đạp miễn phí, 10 phút ra phố cổ và biển.', en: 'Rice fields at the front and the back. Free bicycles — 10 minutes to the Ancient Town and the beach.' },
       { vi: 'Khu chung: sảnh tiếp khách, vườn có chỗ ngồi, góc làm việc chung, bể sục nóng – lạnh, cà phê và đồ ăn nhẹ miễn phí.', en: 'Shared spaces: lounge, garden seating, co-working corner, hot & cold jacuzzi, free coffee and light snacks.' },
       { vi: 'Bếp, bàn ăn, máy giặt và máy sấy riêng trong từng căn — rất hợp khách ở dài 1–3 tháng.', en: 'Private kitchen, dining table, washer and dryer in every apartment — made for 1–3 month stays.' },
@@ -87,11 +87,11 @@ const HOUSES = [
     photos: order([10, 29, 17, 8, 7, 23, 3, 12, 18, 28, 30, 31, 15], 35).map(n => img('trau', n)),
     stats: { guests: '2 – 9', beds: '1 – 3', pool: false },
     lead: {
-      vi: 'Tường đất nung, sân trong xanh mát và lối vào riêng cho từng căn. Hai căn hộ nhỏ giữa đồng An Mỹ — gần như ở riêng, đủ yên để nghe tiếng lá.',
-      en: 'Terracotta walls, a leafy inner courtyard and a private entrance for each apartment. Two small homes in the An Mỹ fields — almost your own, quiet enough to hear the leaves.',
+      vi: 'Tường đất nung, sân trong xanh mát và lối vào riêng cho từng căn. Hai căn hộ độc lập giữa đồng An Mỹ — riêng tư trọn vẹn, tĩnh lặng đến mức nghe rõ tiếng lá.',
+      en: 'Terracotta walls, a leafy inner courtyard and a private entrance for each apartment. Two independent apartments in the An Mỹ fields — wholly private, so still you can hear the leaves.',
     },
     highlights: [
-      { vi: 'Chất liệu mộc, lên ảnh đẹp — hợp khách thích không gian bản địa.', en: 'Raw, natural materials and very photogenic — for guests who want a local feel.' },
+      { vi: 'Chất liệu mộc mạc, đậm hồn bản địa — mỗi góc nhà như một khung hình.', en: 'Natural materials with a deep sense of place — every corner feels like a frame.' },
       { vi: 'Chỉ 2 căn trong tòa, mỗi căn một lối vào riêng — riêng tư như nhà mình.', en: 'Just two apartments, each with its own entrance — private like home.' },
       { vi: 'Bếp, bàn ăn, máy giặt và máy sấy riêng trong mỗi căn; có bồn tắm, lò vi sóng, máy pha cà phê.', en: 'Private kitchen, dining table, washer and dryer in each apartment; bathtub, microwave and coffee machine.' },
       { vi: 'Thuê trọn tòa cho nhóm bạn hoặc hai gia đình: riêng tư mà vẫn gần nhau, tối đa 9 khách.', en: 'Take the whole building for friends or two families: private yet close, up to 9 guests.' },
@@ -128,8 +128,8 @@ const HOUSES = [
     photos: order([20, 22, 4, 1, 25, 26, 19, 3, 5, 12, 13, 29, 16, 17, 18, 21], 29).map(n => img('sen', n)),
     stats: { guests: '4 – 5', beds: '2', pool: true },
     lead: {
-      vi: 'Villa nhỏ cạnh làng rau Trà Quế, trước nhà là hồ sen và đồng lúa. Hồ bơi riêng, sân thượng, sân vườn — cả căn nhà chỉ dành cho nhóm của bạn.',
-      en: 'A small villa beside Trà Quế herb village, with a lotus pond and rice fields out front. Private pool, rooftop and garden — the whole house is just for your group.',
+      vi: 'Villa riêng tư cạnh làng rau Trà Quế, trước nhà là hồ sen và đồng lúa. Hồ bơi riêng, sân thượng, sân vườn — cả căn nhà chỉ dành cho nhóm của bạn.',
+      en: 'A private villa beside Trà Quế herb village, with a lotus pond and rice fields out front. Private pool, rooftop and garden — the whole house is just for your group.',
     },
     highlights: [
       { vi: 'Ngay cạnh làng rau Trà Quế — đi bộ ra ruộng rau, có lớp học nấu ăn và tour làm nông dân một ngày.', en: 'Right by Trà Quế herb village — walk to the gardens, join a cooking class or a farmer-for-a-day tour.' },
@@ -219,7 +219,7 @@ const REVIEWS = [
   { house: 'bien', who: 'Tom & Lucy', from: { vi: 'Úc · kỳ nghỉ 1 tuần', en: 'Australia · one-week holiday' },
     text: { vi: 'Buổi sáng ra biển, buổi chiều về nằm bên hồ bơi dài. Nhà một tầng nên bố mẹ lớn tuổi đi lại rất thoải mái.', en: 'Beach in the morning, the long pool in the afternoon. Being single-storey, it was easy for our parents to get around.' } },
   { house: 'trau', who: 'Thảo', from: { vi: 'TP.HCM · ở 1 tháng', en: 'Ho Chi Minh City · stayed 1 month' },
-    text: { vi: 'Tường đất nung, sân trong đầy cây, ban công ngắm hoàng hôn trên đồng. Cảm giác như có một ngôi nhà nhỏ của riêng mình ở Hội An.', en: 'Terracotta walls, a courtyard full of plants, sunsets over the fields from the balcony. It felt like having my own little home in Hội An.' } },
+    text: { vi: 'Tường đất nung, sân trong đầy cây, ban công ngắm hoàng hôn trên đồng. Cảm giác như có một ngôi nhà của riêng mình ở Hội An.', en: 'Terracotta walls, a courtyard full of plants, sunsets over the fields from the balcony. It felt like having a home of my own in Hội An.' } },
   { house: 'camf', who: 'Daniel', from: { vi: 'Canada · làm việc từ xa', en: 'Canada · remote worker' },
     text: { vi: 'Wi-Fi ổn định, góc làm việc chung yên tĩnh, chiều tối ngâm bể sục trong vườn. Đạp xe mười phút là ra phố cổ.', en: 'Stable Wi-Fi, a quiet co-working corner, and the garden jacuzzi in the evening. The Ancient Town is a ten-minute ride away.' } },
   { house: 'sen', who: 'Julia', from: { vi: 'Pháp · cặp đôi', en: 'France · couple' },

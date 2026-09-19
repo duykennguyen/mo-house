@@ -51,7 +51,7 @@ const ICON = {
 
 /* ---------- Header & footer dùng chung ---------- */
 const NAV = [
-  ['index.html#nha', 'Các căn nhà', 'Our houses', 'houses'],
+  ['index.html#nha', 'Không gian lưu trú', 'Residences', 'houses'],
   ['luu-tru.html', 'Ngắn ngày & dài ngày', 'Short & long stays', 'stay'],
   ['index.html#trai-nghiem', 'Trải nghiệm Hội An', 'Hội An experiences', 'exp'],
   ['index.html#ve-chung-toi', 'Về chúng tôi', 'About us', 'about'],
@@ -101,12 +101,12 @@ function renderFooter() {
     <div class="wrap">
       <div class="footer__grid">
         <div class="footer__lead">
-          <h3 data-en="Four homes in Hội An, for slow days and deep sleep.">Bốn ngôi nhà ở Hội An, cho những ngày chậm và giấc ngủ sâu.</h3>
+          <h3 data-en="Refined retreats in Hội An, where every detail is considered.">Không gian nghỉ dưỡng chuẩn mực tại Hội An, nơi từng chi tiết đều được chăm chút.</h3>
           <p class="footer__phone"><a href="tel:${CONTACT.phone.replace(/\s/g, '')}">${ICON.phone}<span>${CONTACT.phoneDisplay}</span></a></p>
           <small data-en="Phone · Zalo · WhatsApp — 24/7 support">Điện thoại · Zalo · WhatsApp — hỗ trợ 24/7</small>
         </div>
         <div>
-          <h4 data-en="Our houses">Các căn nhà</h4>
+          <h4 data-en="Residences">Không gian lưu trú</h4>
           <ul>${HOUSES.map(h => `<li><a href="${h.page}" ${h.nameEn ? `data-en="${h.nameEn}"` : ''}>${h.name}</a></li>`).join('')}</ul>
         </div>
         <div>
@@ -499,7 +499,7 @@ function initHousePage() {
         <div class="head-row">
           <div>
             <p class="sec-kicker">${t('Mô Đi Phê House', 'Mô Đi Phê House')}</p>
-            <h2 class="sec-title">${t('Những nhà khác', 'Other houses')}</h2>
+            <h2 class="sec-title">${t('Không gian khác', 'Other residences')}</h2>
           </div>
           <a class="btn" href="index.html#nha">${t('Xem tất cả', 'See all')}</a>
         </div>
